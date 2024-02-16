@@ -16,7 +16,7 @@ with st.form('my_form'):
   submitted = st.form_submit_button('Submit')
   st.write(openai_api_key)
   if not openai_api_key.startswith('hf-'):
-    st.write("error)
+    st.write("error")
     st.warning('Please enter your OpenAI API key!!', icon='⚠')
   if submitted and openai_api_key.startswith('hf-'):
     generate_response(text)
