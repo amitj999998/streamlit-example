@@ -7,7 +7,7 @@ openai_api_key = st.sidebar.text_input('OpenAI API Key')
 
 def generate_response(input_text):
   # llm = OpenAI(temperature=0.7, openai_api_key=openai_api_key)
-  st.write("generate response)
+  st.write("generate response")
   llm=HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature": 0.5, "max_length": 64}, huggingfacehub_api_token=openai_api_key)
   st.info(llm(input_text))
 
