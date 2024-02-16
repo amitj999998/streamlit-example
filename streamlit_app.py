@@ -1,5 +1,5 @@
 import streamlit as st
-from langchain import HuggingFaceHub
+from langchain_community.llms import HuggingFaceHub
 
 st.title('🦜🔗 Quickstart App')
 
