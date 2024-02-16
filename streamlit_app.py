@@ -19,6 +19,8 @@ with st.form('my_form'):
   if not openai_api_key.startswith('hf-'):
     st.write("error")
     st.warning('Please enter your OpenAI API key!!', icon='⚠')
+  if openai_api_key.startswith('hf-'):
+    st.write("starts with hf-")
   if submitted and openai_api_key.startswith('hf-'):
     st.write("generate response calling")
     generate_response(text)
