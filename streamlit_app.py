@@ -19,4 +19,5 @@ with st.form('my_form'):
     st.write("error")
     st.warning('Please enter your OpenAI API key!!', icon='⚠')
   if submitted and openai_api_key.startswith('hf-'):
+    st.write("generate response calling")
     generate_response(text)
