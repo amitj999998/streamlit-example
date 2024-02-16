@@ -14,13 +14,8 @@ def generate_response(input_text):
 with st.form('my_form'):
   text = st.text_area('Enter text:', 'What are the three key pieces of advice for learning how to code?')
   submitted = st.form_submit_button('Submit')
-  st.write(submitted)
-  st.write(openai_api_key)
-  if not openai_api_key.startswith('hf-'):
-    st.write("error")
+  if not openai_api_key.startswith('hf_'):
     st.warning('Please enter your OpenAI API key!!', icon='⚠')
-  if openai_api_key.startswith('hf-'):
-    st.write("starts with hf-")
-  if submitted and openai_api_key.startswith('hf-'):
+  if submitted and openai_api_key.startswith('hf_'):
     st.write("generate response calling")
     generate_response(text)
